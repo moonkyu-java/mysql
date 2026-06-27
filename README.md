@@ -30,4 +30,22 @@
 - 
 -id INT(11) NOT NULL AUTO_INCREMENT,
 
+
+데이터 베이스 선택 밑에서 opentutorials가 내가 만든 데이터 베이스 이름
+ USE opentutorials; 
+
+
+위에 만들고 선택한 데이터 베이스 opentutorials에 topic라는 테이블(표)를 생성 
+
+NOT NULL사용하면 그 공간에 공백 불가
+
+PRIMARY KEY(id)); 칸을 중복이 절대 없는 주민등록번호(대표 식별자)로 지정
+
+ CREATE TABLE topic(
+    -> id INT(11) NOT NULL AUTO_INCREMENT,
+    -> title VARCHAR(100) NOT NULL,
+    -> created DATETIME NOT NULL,
+    -> author VARCHAR(30) NULL,
+    -> profile VARCHAR(100) NULL,
+    -> PRIMARY KEY(id));
     
