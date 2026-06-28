@@ -42,10 +42,33 @@ NOT NULL사용하면 그 공간에 공백 불가
 PRIMARY KEY(id)); 칸을 중복이 절대 없는 주민등록번호(대표 식별자)로 지정
 
  CREATE TABLE topic(
+ 
     -> id INT(11) NOT NULL AUTO_INCREMENT,
+    
     -> title VARCHAR(100) NOT NULL,
+    
     -> created DATETIME NOT NULL,
+    
     -> author VARCHAR(30) NULL,
+    
     -> profile VARCHAR(100) NULL,
+    
     -> PRIMARY KEY(id));
+
+테이블 확인하기
+
+    DESC topic;
+
+테이블에 데이터 넣기 새로운 행 추가할때 사용 칸 갯수와 데이터값 개수 일치해야함
+
+    INSERT INTO topic (title, description, created, author, profile) 
+    
+VALUES ('MySQL', 'MySQL is...', NOW(), 'egoing', 'developer');
+
+추가하고 테이블안에 데이터 확인할때 
+
+SELECT * FROM topic;
+
+
+
     
